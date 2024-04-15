@@ -31,8 +31,8 @@ namespace LoginTest
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(10));
             wait.Until(driver => driver.Url.Contains("loginsuccess"));
 
-            var actualUrl = "http://qa.sorted.com/nextrack/loginsuccess";
-            var expectedURL = driver.Url;
+            var expectedURL = "http://qa.sorted.com/nextrack/loginsuccess";
+            var actualUrl = driver.Url;
             Assert.That(expectedURL, Is.EqualTo(actualUrl));
         }
 
